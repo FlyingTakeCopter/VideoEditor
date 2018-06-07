@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/JDVideoEditorLib.iml" filepath="$PROJECT_DIR$/JDVideoEditorLib.iml" />
+      <module fileurl="file://C:\workspace\VideoEditor\JDVideoEditorLib.iml" filepath="C:\workspace\VideoEditor\JDVideoEditorLib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/VideoEditor.iml" filepath="$PROJECT_DIR$/VideoEditor.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
