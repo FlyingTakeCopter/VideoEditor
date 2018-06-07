@@ -599,7 +599,7 @@ public class JVEditor {
 	 * @param onEditorListener 回调接口
 	 */
 	public static void execCmd(String cmd, long duration, final OnEditorListener onEditorListener) {
-		cmd = "ffmpeg " + cmd;
+		cmd = "ffmpeg -threads " + Runtime.getRuntime().availableProcessors() + " " + cmd;
 		String[] cmds = cmd.split(" ");
 		FFmpegCmd.exec(cmds, duration, new OnEditorListener() {
 			@Override
