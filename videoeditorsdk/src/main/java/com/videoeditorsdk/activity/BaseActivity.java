@@ -1,5 +1,7 @@
 package com.videoeditorsdk.activity;
 
+import android.app.Activity;
+import android.os.Build;
 import android.os.Looper;
 import android.support.v7.app.AppCompatActivity;
 
@@ -10,7 +12,7 @@ import com.videoeditorsdk.widget.LoadingDialog;
  * desc
  */
 
-public class BaseActivity extends AppCompatActivity {
+public class BaseActivity extends AppCompatActivity{
     public LoadingDialog loading;
 
     @Override

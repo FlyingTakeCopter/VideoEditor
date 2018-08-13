@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         if (v.getId() == R.id.sample_text) {
             Intent intent=new Intent(MainActivity.this,PreviewActivity.class);
-            intent.putExtra("path","/sdcard/ffmpegtest/1080.mp4");
+            intent.putExtra("path","/sdcard/ffmpegtest/2.mp4");
             startActivity(intent);
         }
     }

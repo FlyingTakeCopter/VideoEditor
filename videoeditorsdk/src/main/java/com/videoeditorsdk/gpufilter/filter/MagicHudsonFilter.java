@@ -2,10 +2,12 @@ package com.videoeditorsdk.gpufilter.filter;
 
 import android.opengl.GLES20;
 
+
 import com.videoeditorsdk.MyApplication;
 import com.videoeditorsdk.R;
 import com.videoeditorsdk.gpufilter.basefilter.GPUImageFilter;
 import com.videoeditorsdk.gpufilter.utils.OpenGlUtils;
+
 
 
 public class MagicHudsonFilter extends GPUImageFilter {

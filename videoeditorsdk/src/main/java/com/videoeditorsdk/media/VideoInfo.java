@@ -3,6 +3,7 @@ package com.videoeditorsdk.media;
 import java.io.Serializable;
 
 /**
+ * Created by Administrator on 2017/6/29 0029.
  * 视频的信息bean
  */
 

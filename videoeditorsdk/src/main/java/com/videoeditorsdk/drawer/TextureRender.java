@@ -24,6 +24,7 @@ import android.opengl.GLES20;
 import android.opengl.Matrix;
 import android.util.Log;
 
+
 import com.videoeditorsdk.MyApplication;
 import com.videoeditorsdk.R;
 import com.videoeditorsdk.filter.AFilter;

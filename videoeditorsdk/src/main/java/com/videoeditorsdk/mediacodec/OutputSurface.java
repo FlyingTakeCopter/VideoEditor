@@ -20,6 +20,8 @@ import android.opengl.EGL14;
 import android.util.Log;
 import android.view.Surface;
 
+
+import com.videoeditorsdk.MyApplication;
 import com.videoeditorsdk.drawer.TextureRender;
 import com.videoeditorsdk.gpufilter.basefilter.GPUImageFilter;
 import com.videoeditorsdk.media.VideoInfo;

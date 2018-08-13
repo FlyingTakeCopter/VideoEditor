@@ -15,6 +15,8 @@ import android.widget.Toast;
 import com.videoeditorsdk.Constants;
 import com.videoeditorsdk.R;
 import com.videoeditorsdk.gpufilter.SlideGpuFilterGroup;
+import com.videoeditorsdk.gpufilter.filter.MagicAntiqueFilter;
+import com.videoeditorsdk.gpufilter.filter.MagicBeautyFilter;
 import com.videoeditorsdk.gpufilter.helper.MagicFilterType;
 import com.videoeditorsdk.media.MediaPlayerWrapper;
 import com.videoeditorsdk.media.VideoInfo;
@@ -147,29 +149,30 @@ public class PreviewActivity extends BaseActivity implements View.OnClickListene
 
     @Override
     public void onClick(View v) {
+        int i = v.getId();
+        if (i == R.id.iv_back || i == R.id.iv_close) {
+            if (isLoading()) {
+                endLoading();
+            }
+            finish();
 
-        final int vId = v.getId();
-        if (vId == R.id.iv_back || vId == R.id.iv_close){
-            if (isLoading()){
-                    endLoading();
-                }
-                finish();
-        }else if (vId == R.id.iv_beauty){
+        } else if (i == R.id.iv_beauty) {
             mVideoView.switchBeauty();
-                if (mBeauty.isSelected()){
-                    mBeauty.setSelected(false);
-                }else {
-                    mBeauty.setSelected(true);
-                }
-        }else if (vId == R.id.iv_confirm){
-            if (isLoading()){
+            if (mBeauty.isSelected()) {
+                mBeauty.setSelected(false);
+            } else {
+                mBeauty.setSelected(true);
+            }
+
+        } else if (i == R.id.iv_confirm) {
+            if (isLoading()) {
                 return;
             }
             mVideoView.pause();
-            showLoading("视频处理中",false);
+            showLoading("视频处理中", false);
 
             VideoClipper clipper = new VideoClipper();
-            if (mBeauty.isSelected()){
+            if (mBeauty.isSelected()) {
                 clipper.showBeauty();
             }
             clipper.setInputVideoPath(mPath);
@@ -183,13 +186,14 @@ public class PreviewActivity extends BaseActivity implements View.OnClickListene
                 }
             });
             try {
-                Log.e("hero","-----PreviewActivity---clipVideo");
-                clipper.clipVideo(0,mVideoView.getVideoDuration()*1000);
+                Log.e("hero", "-----PreviewActivity---clipVideo");
+                clipper.clipVideo(0, mVideoView.getVideoDuration() * 1000);
             } catch (IOException e) {
                 e.printStackTrace();
             }
-        }
 
+
+        }
     }
 
     @Override

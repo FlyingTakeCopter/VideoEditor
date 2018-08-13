@@ -3,15 +3,16 @@ package com.videoeditorsdk.media;
 import android.media.AudioManager;
 import android.media.MediaMetadataRetriever;
 import android.media.MediaPlayer;
-import android.os.Build;
-import android.support.annotation.RequiresApi;
+import android.util.Log;
 import android.view.Surface;
 
 import java.io.IOException;
+import java.net.PortUnreachableException;
 import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * Created by Administrator on 2017/6/29 0029.
  * desc：MediaPlayer的代理类 支持循环播放多个视频
  */
 
@@ -74,10 +75,6 @@ public class MediaPlayerWrapper implements MediaPlayer.OnCompletionListener, Med
             player.setOnErrorListener(this);
             player.setOnPreparedListener(this);
             player.setDataSource(mSrcList.get(i));
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
-                player.setVideoScalingMode(MediaPlayer.VIDEO_SCALING_MODE_SCALE_TO_FIT);
-            }
-
             player.prepare();
             mPlayerList.add(player);
             if (i == 0) {
@@ -204,9 +201,9 @@ public class MediaPlayerWrapper implements MediaPlayer.OnCompletionListener, Med
         return false;
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
     @Override
     public void onPrepared(MediaPlayer mp) {
+
     }
 
     public void setVolume(float volume) {

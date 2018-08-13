@@ -19,6 +19,7 @@ package com.videoeditorsdk.gpufilter.basefilter;
 import android.graphics.PointF;
 import android.opengl.GLES20;
 
+
 import com.videoeditorsdk.gpufilter.utils.OpenGlUtils;
 import com.videoeditorsdk.gpufilter.utils.Rotation;
 import com.videoeditorsdk.gpufilter.utils.TextureRotationUtil;

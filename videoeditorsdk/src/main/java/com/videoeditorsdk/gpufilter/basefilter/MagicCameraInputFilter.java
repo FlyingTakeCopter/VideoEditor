@@ -3,6 +3,7 @@ package com.videoeditorsdk.gpufilter.basefilter;
 import android.opengl.GLES11Ext;
 import android.opengl.GLES20;
 
+
 import com.videoeditorsdk.R;
 import com.videoeditorsdk.gpufilter.utils.OpenGlUtils;
 

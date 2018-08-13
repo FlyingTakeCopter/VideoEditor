@@ -8,9 +8,11 @@ import android.util.SparseArray;
 import com.videoeditorsdk.utils.MatrixUtils;
 import com.videoeditorsdk.utils.OpenGlUtils;
 
+import java.io.InputStream;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 import java.nio.FloatBuffer;
+import java.nio.ShortBuffer;
 import java.util.Arrays;
 
 /**

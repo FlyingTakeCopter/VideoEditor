@@ -2,7 +2,16 @@ package com.videoeditorsdk;
 
 import android.app.Application;
 import android.content.Context;
+import android.os.Handler;
+import android.util.DisplayMetrics;
 import android.util.Log;
+
+import com.videoeditorsdk.media.VideoInfo;
+import com.videoeditorsdk.mediacodec.VideoRunnable;
+
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.nio.ByteBuffer;
 
 /**
  * Created by cj on 2017/8/6.
